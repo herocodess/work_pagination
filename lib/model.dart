@@ -55,8 +55,6 @@ class Connect with ChangeNotifier {
   String university;
   String avatar;
   bool checkIsFollowing;
-  // List<Null> moderators;
-  // int iV;, this.moderators, this.iV
 
   factory Connect.fromJson(Map<String, dynamic> json) => Connect(
         id: json["_id"],
@@ -65,8 +63,6 @@ class Connect with ChangeNotifier {
         university: json["userProfile"]["university"],
         checkIsFollowing: json["checkIsFollowing"],
         avatar: json["userProfile"]["avatar"],
-        // moderators: List<dynamic>.from(json["moderators"].map((x) => x)),
-        // v: json["__v"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -78,7 +74,5 @@ class Connect with ChangeNotifier {
         "userProfile"
             "avatar": avatar,
         "checkIsFollowing": checkIsFollowing
-        // "moderators": List<dynamic>.from(moderators.map((x) => x)),
-        // "__v": v,
       };
 }

@@ -124,10 +124,8 @@ class _MyHomePageState extends State<MyHomePage> {
           Connect c = Connect.fromJson(u);
           mainList.add(c);
         }
-        print("mainList $mainList");
         setState(() {
           nameList = mainList.map((e) => e.name).toList();
-          print("nameList $nameList");
         });
       } else {
         print(response.body);
@@ -135,5 +133,6 @@ class _MyHomePageState extends State<MyHomePage> {
     } catch (e) {
       print(e);
     }
+    return mainList;
   }
 }
